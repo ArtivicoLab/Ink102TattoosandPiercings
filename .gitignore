@@ -2,30 +2,30 @@
 # Separates development template from customer's actual content
 
 # Customer's actual tattoo portfolio images
-# images/tattoos/
-# images/card-gallery/
-# images/portfolio/
-# images/gallery/
-# images/work/
+images/tattoos/
+images/card-gallery/
+images/portfolio/
+images/gallery/
+images/work/
 
 # Customer's business photos
-# images/studio/
-# images/team/
-# images/about/
-# images/shop/
+images/studio/
+images/team/
+images/about/
+images/shop/
 
 # Customer's contact information and business details
-# contact-info.json
-# business-details.json
-# staff-info.json
+contact-info.json
+business-details.json
+staff-info.json
 
 # Customer's pricing and service information
-# pricing/
-# services/
+pricing/
+services/
 
 # Customer's actual content files
-# content/
-# data/
+content/
+data/
 
 # Environment variables and secrets
 .env
@@ -34,13 +34,13 @@
 .env.development
 
 # Customer's customized CSS overrides
-# css/custom.css
-# css/customer.css
-# css/business.css
+css/custom.css
+css/customer.css
+css/business.css
 
 # Customer's custom JavaScript
-# js/custom.js
-# js/business.js
+js/custom.js
+js/business.js
 
 # Database files
 *.db

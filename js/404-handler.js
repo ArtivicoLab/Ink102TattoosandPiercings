@@ -132,32 +132,22 @@
    * Initialize 404 handling
    */
   function init() {
-    // Check immediately for server 404 errors
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', check404);
-    } else {
-      check404();
-    }
-    
-    // Also check after a brief delay to catch slow-loading error pages
-    setTimeout(check404, 250);
-    
-    // Handle hash changes
-    window.addEventListener('hashchange', handleHashChange);
-    
-    // Handle broken images and links when DOM is ready
+    // Only handle broken images, disable aggressive 404 redirects
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
         handleBrokenImages();
-        handleBrokenLinks();
-        check404(); // Check again after DOM loads
+        // handleBrokenLinks(); // Disabled
+        // check404(); // Disabled
       });
     } else {
       handleBrokenImages();
-      handleBrokenLinks();
+      // handleBrokenLinks(); // Disabled
     }
     
-    console.log('✅ 404 Handler initialized');
+    // Disable hash change handling and 404 checks
+    // window.addEventListener('hashchange', handleHashChange); // Disabled
+    
+    console.log('✅ 404 Handler initialized (minimal mode)');
   }
 
   // Initialize when script loads

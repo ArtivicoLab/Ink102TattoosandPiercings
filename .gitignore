@@ -2,9 +2,9 @@
 # Separates development template from customer's actual content
 
 # Customer's actual tattoo portfolio images
-images/tattoos/
-images/card-gallery/
-images/portfolio/
+# images/tattoos/
+# images/card-gallery/
+# images/portfolio/
 images/gallery/
 images/work/
 

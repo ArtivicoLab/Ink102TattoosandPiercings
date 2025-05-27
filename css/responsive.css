@@ -15,6 +15,12 @@
     }
 }
 
+@media (max-width: 321px) {
+    .deck-counter span {
+        font-size: .8rem;
+    }
+}
+
 /* Header & Navigation responsive adjustments */
 @media (min-width: 769px) {
   .nav-links {

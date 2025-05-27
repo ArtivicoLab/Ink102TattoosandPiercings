@@ -71,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /**
-   * Load cards dynamically from the images/tattoos folder
+   * Load cards dynamically from the images/card-gallery folder
    */
   async function loadCardsFromFolder() {
-    const cardGalleryPath = 'images/tattoos/';
+    const cardGalleryPath = 'images/card-gallery/';
     
     // Try to get the list of files from the server
     let imageFiles = [];

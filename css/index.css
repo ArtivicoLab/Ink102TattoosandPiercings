@@ -2003,9 +2003,10 @@ header.scrolled {
   transform: translateY(100px);
   transition: all 0.3s ease;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px;
   border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
 }
 
 .welcome-popup.show {

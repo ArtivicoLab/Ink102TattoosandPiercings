@@ -1992,6 +1992,127 @@ header.scrolled {
   }
 }
 
+/* Welcome Popup */
+.welcome-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3000;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.welcome-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.welcome-popup.hide {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.welcome-content {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-lg);
+  max-width: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  animation: welcomeGlow 2s infinite alternate;
+}
+
+@keyframes welcomeGlow {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 25px rgba(212, 175, 55, 0.4), 
+                0 0 30px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.welcome-icon {
+  font-size: 1.5rem;
+  animation: welcomeSpark 1.5s infinite;
+}
+
+@keyframes welcomeSpark {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.welcome-text {
+  flex: 1;
+  color: var(--primary-light);
+}
+
+.welcome-text h3 {
+  margin: 0 0 2px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.welcome-text .emphasis-102 {
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  font-size: 1.1em;
+}
+
+.welcome-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  opacity: 0.9;
+}
+
+.welcome-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-close:hover {
+  background: var(--primary-light);
+  transform: scale(1.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .welcome-popup {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .welcome-content {
+    max-width: none;
+  }
+}
+
 /* Business Status Banner */
 .business-status-banner {
   background: linear-gradient(135deg, #0f3460 0%, #1e5b8c 100%);

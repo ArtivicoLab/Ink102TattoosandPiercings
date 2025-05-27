@@ -1,0 +1,166 @@
+# Ink 102 Tattoos and Piercings - Git Ignore File
+# Separates development template from customer's actual content
+
+# Customer's actual tattoo portfolio images
+images/tattoos/
+images/card-gallery/
+images/portfolio/
+images/gallery/
+images/work/
+
+# Customer's business photos
+images/studio/
+images/team/
+images/about/
+images/shop/
+
+# Customer's contact information and business details
+contact-info.json
+business-details.json
+staff-info.json
+
+# Customer's pricing and service information
+pricing/
+services/
+
+# Customer's actual content files
+content/
+data/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.development
+
+# Customer's customized CSS overrides
+css/custom.css
+css/customer.css
+css/business.css
+
+# Customer's custom JavaScript
+js/custom.js
+js/business.js
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Customer's social media content
+social-media/
+instagram/
+facebook/
+
+# Customer's marketing materials
+marketing/
+flyers/
+business-cards/
+
+# Customer's appointment and booking data
+appointments/
+bookings/
+calendar/
+
+# Customer's client information (privacy protection)
+clients/
+customer-data/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Configuration files with sensitive data
+config/production.json
+config/local.json

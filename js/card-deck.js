@@ -103,34 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (imageFiles.length === 0) {
       const potentialImages = [
         'vibrant-color-masterpiece.jpg',
-        'black-gray-artistry.jpg', 
-        'custom-design-work.jpg',
-        'detailed-portrait-work.jpg',
-        'colorful-dragon-tattoo.jpg',
-        'realistic-portrait.jpg',
-        'geometric-design.jpg',
-        'floral-sleeve.jpg',
-        'minimalist-art.jpg',
-        'traditional-style.jpg',
-        'watercolor-design.jpg',
-        'tribal-artwork.jpg',
-        // Common patterns from attached assets
-        'IMG_8677.png',
-        'IMG_8678.png',
-        'IMG_8679.png',
-        'IMG_8680.png',
-        'IMG_8681.png',
-        'IMG_8682.png',
-        'IMG_8683.png',
-        'IMG_8684.jpeg',
-        'IMG_8685.jpeg',
-        'IMG_8686.jpeg',
-        'IMG_8687.jpeg',
-        'IMG_8688.jpeg',
-        'IMG_8689.jpeg',
-        'IMG_8690.jpeg',
-        'IMG_8691.jpeg',
-        'IMG_8692.jpeg'
+        'black-gray-artistry.jpg' 
       ];
       imageFiles = potentialImages;
     }

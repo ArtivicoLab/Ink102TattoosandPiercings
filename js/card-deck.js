@@ -99,31 +99,35 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Could not fetch directory listing, using fallback method');
     }
     
-    // Fallback: only use actual images that exist
+    // Fallback: use actual images with beautiful names
     if (imageFiles.length === 0) {
-      const potentialImages = [
-        'IMG_8684.jpeg',
-        'IMG_8685.jpeg',
-        'IMG_8686.jpeg',
-        'IMG_8687.jpeg',
-        'IMG_8688.jpeg',
-        'IMG_8689.jpeg',
-        'IMG_8690.jpeg',
-        'IMG_8691.jpeg',
-        'IMG_8692.jpeg'
+      const imageMapping = [
+        { file: 'IMG_8684.jpeg', title: 'Vibrant Color Masterpiece', description: 'Stunning full-color tattoo showcasing artistic brilliance' },
+        { file: 'IMG_8685.jpeg', title: 'Black & Gray Artistry', description: 'Professional black and gray shading technique' },
+        { file: 'IMG_8686.jpeg', title: 'Custom Design Work', description: 'Unique artistic expression tailored to client vision' },
+        { file: 'IMG_8687.jpeg', title: 'Detailed Portrait Work', description: 'Realistic portrait with exceptional detail and precision' },
+        { file: 'IMG_8688.jpeg', title: 'Geometric Design', description: 'Modern geometric patterns with perfect symmetry' },
+        { file: 'IMG_8689.jpeg', title: 'Realistic Portrait', description: 'Lifelike portrait capturing every detail' },
+        { file: 'IMG_8690.jpeg', title: 'Fine Line Artistry', description: 'Delicate fine line work with exceptional precision' },
+        { file: 'IMG_8691.jpeg', title: 'Traditional Style', description: 'Classic traditional tattoo with bold lines' },
+        { file: 'IMG_8692.jpeg', title: 'Premium Shading Work', description: 'Expert shading technique creating depth and dimension' }
       ];
-      imageFiles = potentialImages;
+      
+      imageFiles = imageMapping;
     }
 
     const existingCards = [];
     
-    for (const imageName of imageFiles) {
+    for (const imageData of imageFiles) {
+      // Handle both string filenames and object mappings
+      const imageName = typeof imageData === 'string' ? imageData : imageData.file;
       const imageUrl = cardGalleryPath + imageName;
+      
       if (await imageExists(imageUrl)) {
         existingCards.push({
           url: imageUrl,
-          title: formatCardTitle(imageName),
-          description: generateDescription(imageName)
+          title: typeof imageData === 'object' ? imageData.title : formatCardTitle(imageName),
+          description: typeof imageData === 'object' ? imageData.description : generateDescription(imageName)
         });
       }
     }

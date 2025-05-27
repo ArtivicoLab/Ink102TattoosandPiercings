@@ -334,10 +334,3 @@
     flex-wrap: nowrap;
   }
 }
-
-/* Deck title display as a block item for longer names */
-@media (max-width: 321px) {
-    .deck-counter span {
-        display: block;
-    }
-}

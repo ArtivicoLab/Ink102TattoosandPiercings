@@ -425,6 +425,12 @@
   }
 }
 
+/* Deck title display as a block item for longer names */
+@media (max-width: 321px) {
+    .deck-counter span {
+        display: block;
+    }
+}
 /* Loading State */
 .deck-loading {
   text-align: center;

@@ -15,6 +15,12 @@
     }
 }
 
+@media (max-width: 321px) {
+    .btn, .hero-contact-info  {
+        max-width: 90% !important;
+    }
+}
+
 /* Header & Navigation responsive adjustments */
 @media (min-width: 769px) {
   .nav-links {

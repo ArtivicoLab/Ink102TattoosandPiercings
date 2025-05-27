@@ -71,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /**
-   * Load cards dynamically from the images/card-gallery folder
+   * Load cards dynamically from the images/tattoos folder
    */
   async function loadCardsFromFolder() {
-    const cardGalleryPath = 'images/card-gallery/';
+    const cardGalleryPath = 'images/tattoos/';
     
     // Try to get the list of files from the server
     let imageFiles = [];
@@ -99,35 +99,51 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Could not fetch directory listing, using fallback method');
     }
     
-    // Fallback: use actual images with beautiful names
+    // Fallback: try known patterns and common filenames
     if (imageFiles.length === 0) {
-      const imageMapping = [
-        { file: 'IMG_8684.jpeg', title: 'Vibrant Color Masterpiece', description: 'Stunning full-color tattoo showcasing artistic brilliance' },
-        { file: 'IMG_8685.jpeg', title: 'Black & Gray Artistry', description: 'Professional black and gray shading technique' },
-        { file: 'IMG_8686.jpeg', title: 'Custom Design Work', description: 'Unique artistic expression tailored to client vision' },
-        { file: 'IMG_8687.jpeg', title: 'Detailed Portrait Work', description: 'Realistic portrait with exceptional detail and precision' },
-        { file: 'IMG_8688.jpeg', title: 'Geometric Design', description: 'Modern geometric patterns with perfect symmetry' },
-        { file: 'IMG_8689.jpeg', title: 'Realistic Portrait', description: 'Lifelike portrait capturing every detail' },
-        { file: 'IMG_8690.jpeg', title: 'Fine Line Artistry', description: 'Delicate fine line work with exceptional precision' },
-        { file: 'IMG_8691.jpeg', title: 'Traditional Style', description: 'Classic traditional tattoo with bold lines' },
-        { file: 'IMG_8692.jpeg', title: 'Premium Shading Work', description: 'Expert shading technique creating depth and dimension' }
+      const potentialImages = [
+        'vibrant-color-masterpiece.jpg',
+        'black-gray-artistry.jpg', 
+        'custom-design-work.jpg',
+        'detailed-portrait-work.jpg',
+        'colorful-dragon-tattoo.jpg',
+        'realistic-portrait.jpg',
+        'geometric-design.jpg',
+        'floral-sleeve.jpg',
+        'minimalist-art.jpg',
+        'traditional-style.jpg',
+        'watercolor-design.jpg',
+        'tribal-artwork.jpg',
+        // Common patterns from attached assets
+        'IMG_8677.png',
+        'IMG_8678.png',
+        'IMG_8679.png',
+        'IMG_8680.png',
+        'IMG_8681.png',
+        'IMG_8682.png',
+        'IMG_8683.png',
+        'IMG_8684.jpeg',
+        'IMG_8685.jpeg',
+        'IMG_8686.jpeg',
+        'IMG_8687.jpeg',
+        'IMG_8688.jpeg',
+        'IMG_8689.jpeg',
+        'IMG_8690.jpeg',
+        'IMG_8691.jpeg',
+        'IMG_8692.jpeg'
       ];
-      
-      imageFiles = imageMapping;
+      imageFiles = potentialImages;
     }
 
     const existingCards = [];
     
-    for (const imageData of imageFiles) {
-      // Handle both string filenames and object mappings
-      const imageName = typeof imageData === 'string' ? imageData : imageData.file;
+    for (const imageName of imageFiles) {
       const imageUrl = cardGalleryPath + imageName;
-      
       if (await imageExists(imageUrl)) {
         existingCards.push({
           url: imageUrl,
-          title: typeof imageData === 'object' ? imageData.title : formatCardTitle(imageName),
-          description: typeof imageData === 'object' ? imageData.description : generateDescription(imageName)
+          title: formatCardTitle(imageName),
+          description: generateDescription(imageName)
         });
       }
     }

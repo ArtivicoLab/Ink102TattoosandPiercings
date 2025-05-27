@@ -2258,7 +2258,7 @@ header.scrolled {
 .specials-banner {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   color: white;
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0;
   position: relative;
   overflow: hidden;
 }
@@ -2286,15 +2286,15 @@ header.scrolled {
 
 .specials-header {
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
 .specials-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .flash-text {
@@ -2317,19 +2317,19 @@ header.scrolled {
 
 .specials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .special-deal {
   background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
   display: flex;
   align-items: center;
-  gap: var(--space-md);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  gap: var(--space-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
@@ -2367,13 +2367,13 @@ header.scrolled {
 .deal-icon {
   background: var(--accent-gold);
   color: white;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
   animation: iconFloat 3s ease-in-out infinite;
 }
@@ -2388,17 +2388,17 @@ header.scrolled {
 }
 
 .deal-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-dark);
-  margin: 0 0 var(--space-xs) 0;
+  margin: 0 0 2px 0;
 }
 
 .deal-content p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--grey-600);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .regular-price {
@@ -2416,12 +2416,12 @@ header.scrolled {
 .deal-price,
 .deal-badge,
 .deal-save {
-  font-size: 1.2rem;
-  font-weight: 800;
-  padding: var(--space-xs) var(--space-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 6px 12px;
   border-radius: var(--border-radius-md);
   text-align: center;
-  min-width: 80px;
+  min-width: 60px;
 }
 
 .deal-price {
@@ -2453,12 +2453,12 @@ header.scrolled {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  padding: var(--space-md) var(--space-lg);
-  border-radius: 50px;
-  font-weight: 700;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 

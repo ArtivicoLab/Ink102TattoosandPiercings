@@ -17,7 +17,7 @@
 
 @media (max-width: 321px) {
     .deck-counter span {
-        font-size: .8rem;
+        display: block;
     }
 }
 

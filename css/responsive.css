@@ -15,12 +15,6 @@
     }
 }
 
-@media (max-width: 321px) {
-    .deck-counter span {
-        display: block;
-    }
-}
-
 /* Header & Navigation responsive adjustments */
 @media (min-width: 769px) {
   .nav-links {
@@ -339,4 +333,11 @@
   .footer-links {
     flex-wrap: nowrap;
   }
+}
+
+/* Deck title display as a block item for longer names */
+@media (max-width: 321px) {
+    .deck-counter span {
+        display: block;
+    }
 }

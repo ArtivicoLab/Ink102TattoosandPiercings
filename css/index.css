@@ -412,7 +412,7 @@ header.scrolled {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 300px;
+  width: min(300px, 80vw);
   height: 100vh;
   background-color: var(--primary-light);
   display: flex;
@@ -1993,6 +1993,7 @@ header.scrolled {
 }
 
 /* Welcome Popup */
+
 .welcome-popup {
   position: fixed;
   bottom: 20px;
@@ -2002,6 +2003,9 @@ header.scrolled {
   transform: translateY(100px);
   transition: all 0.3s ease;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: var(--border-radius-lg);
 }
 
 .welcome-popup.show {

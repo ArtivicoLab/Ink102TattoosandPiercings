@@ -10,14 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
    * Initialize welcome popup
    */
   function initializeWelcomePopup() {
-    // Check if user has already seen the welcome popup today
-    const lastShown = localStorage.getItem('ink102-welcome-shown');
-    const today = new Date().toDateString();
-    
-    if (lastShown !== today) {
-      createAndShowWelcomePopup();
-      localStorage.setItem('ink102-welcome-shown', today);
-    }
+    // Show welcome popup on every page load/refresh
+    createAndShowWelcomePopup();
   }
 
   /**
